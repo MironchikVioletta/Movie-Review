@@ -1,0 +1,14 @@
+<h2>Users younger then 12</h2>
+
+<table id="kids-table">
+    <tr>
+        <th>id</th>
+        <th>email</th>
+    </tr>
+    <% @kids.each do |kid| %>
+    <tr>
+        <td><%= kid.id %></td>
+        <td><%= link_to kid.email, kid %></td>
+    </tr>
+    <% end %>
+</table>

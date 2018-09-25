@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>MovieReview</title>
+  <link data-turbolinks-track="true" href="/assets/application.css" media="all" rel="stylesheet" />
+  <script data-turbolinks-track="true" src="/assets/application.js"></script>
+  
+</head>
+<body>
+  <nav class="navbar navbar-default" role="navigation">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">Movie Review</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+          <li><a class="active" href="/movies/new">New Movie</a></li>
+          <li><a href="/users/edit">Account</a></li>
+
+          <li><a href="/kids">Kids</a></li>
+
+          <li><a href="/premium_users">Premium</a></li>
+
+          <li><a href="/rude_users">Rude Users</a></li>
+          <li><a data-confirm="Are you sure?" data-method="delete" href="/users/sign_out" rel="nofollow">Log out</a>
+
+      </ul>
+
+      <form accept-charset="UTF-8" action="/movies/search" class="navbar-form navbar-right" method="get" role="search"><div style="display:none"><input name="utf8" type="hidden" value="&#x2713;" /></div>
+        <p>
+            <input class="form-control" id="search" name="search" type="text" />
+            <input class="btn btn-default" type="submit" value="Search" />
+        </p>
+</form>    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+  <div class="container">
+    <h1>New review</h1>
+
+<form accept-charset="UTF-8" action="/movies/1/reviews" class="new_review" id="new_review" method="post"><div style="display:none"><input name="utf8" type="hidden" value="&#x2713;" /></div>
+
+  <div class="field">
+    <!-- <label for="review_rating">Rating</label><br>
+    <input id="review_rating" name="review[rating]" type="number" /> -->
+    <div id="star-rating"></div>
+  </div>
+
+  <div class="field">
+    <label for="review_comment">Comment</label><br>
+    <textarea id="review_comment" name="review[comment]">
+</textarea>
+  </div>
+  <div class="actions">
+    <input name="commit" type="submit" value="Create Review" />
+  </div>
+</form>
+<script>
+    $('#star-rating').raty({
+        path: '/assets/',
+        scoreName: 'review[rating]'
+    });
+</script>
+
+
+<a href="/movies.1">Back</a>
+
+    <br />
+<span>Your city is <a href="/users/city/edit">NY</a>
+</span>
+
+<br />
+<br />
+     <a href="/movies/1">
+       <img alt="Test movie img" class="image" src="/system/movies/images/000/000/001/small/test_movie_img.jpg?1534182837" />
+</a>
+
+
+  </div>
+</body>
+</html>

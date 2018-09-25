@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>MovieReview</title>
+  <link data-turbolinks-track="true" href="/assets/application.css" media="all" rel="stylesheet" />
+  <script data-turbolinks-track="true" src="/assets/application.js"></script>
+  
+</head>
+<body>
+  <nav class="navbar navbar-default" role="navigation">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">Movie Review</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+          <li><a class="active" href="/movies/new">New Movie</a></li>
+          <li><a href="/users/edit">Account</a></li>
+
+          <li><a href="/kids">Kids</a></li>
+
+          <li><a href="/premium_users">Premium</a></li>
+
+          <li><a href="/rude_users">Rude Users</a></li>
+          <li><a data-confirm="Are you sure?" data-method="delete" href="/users/sign_out" rel="nofollow">Log out</a>
+
+      </ul>
+
+      <form accept-charset="UTF-8" action="/movies/search" class="navbar-form navbar-right" method="get" role="search"><div style="display:none"><input name="utf8" type="hidden" value="&#x2713;" /></div>
+        <p>
+            <input class="form-control" id="search" name="search" type="text" />
+            <input class="btn btn-default" type="submit" value="Search" />
+        </p>
+</form>    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+  <div class="container">
+    
+<div class="row">
+    <div class="col-sm-6 col-md-3">
+      <div class="thumbnail">
+        <a href="/movies/1"><img alt="Test movie img" class="image" src="/system/movies/images/000/000/001/medium/test_movie_img.jpg?1534180558" /></a>
+      </div>
+    </div>
+</div>
+
+<!-- <h1>Listing movies</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Description</th>
+      <th>Movie length</th>
+      <th>Director</th>
+      <th>Rating</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+      <tr>
+        <td><img alt="Test movie img" src="/system/movies/images/000/000/001/medium/test_movie_img.jpg?1534180558" /></td>
+        <td>Test Movie</td>
+        <td>description</td>
+        <td>1:20</td>
+        <td>director</td>
+        <td>5</td>
+        <td><a href="/movies/1">Show</a></td>
+        <td><a href="/movies/1/edit">Edit</a></td>
+        <td><a data-confirm="Are you sure?" data-method="delete" href="/movies/1" rel="nofollow">Destroy</a></td>
+      </tr>
+  </tbody>
+</table>
+
+<br>
+
+<a href="/movies/new">New Movie</a> -->
+
+    <br />
+<span>Your city is <a href="/users/city/edit">NY</a>
+</span>
+
+<br />
+<br />
+
+
+
+  </div>
+</body>
+</html>

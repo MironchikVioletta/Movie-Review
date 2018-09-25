@@ -1,0 +1,18 @@
+<% if !user_signed_in? %>
+  <div class="jumbotron">
+    <h1>Your Favourite Reviewed</h1>
+    <p>Hashtag hoodie mumblecore selfies. Authentic keffiyeh leggins Kickstarter, narwhal jean shorts XOXO Vice Austin cardigan. Organic drinking vinegat freegan pickled.</p>
+
+    <p><%= link_to "Sign Up To Write A Review", new_user_registration_path, class: "btn btn-primary btn-lg" %></p>
+  </div>
+<% end %>
+
+<div class="row">
+  <% @movies.each do |movie| %>
+    <div class="col-sm-6 col-md-3">
+      <div class="thumbnail">
+        <%= link_to (image_tag movie.image.url(:medium), class: 'movie_poster', data: {'movie-id' => movie.id}), movie %>
+      </div>
+    </div>
+  <% end %>
+</div>

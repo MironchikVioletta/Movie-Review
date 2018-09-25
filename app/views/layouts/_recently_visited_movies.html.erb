@@ -1,0 +1,7 @@
+<% if session[:visited_movie_ids].present?  %>
+ <% session[:visited_movie_ids].each do |id| %>
+     <%= link_to movie_path(id) do %>
+       <%= image_tag(Movie.find(id).image.url(:small), class: 'visited_movie_poster') %>
+     <% end %>
+ <% end %>
+ <% end %>

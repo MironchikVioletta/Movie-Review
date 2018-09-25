@@ -1,0 +1,14 @@
+<h2>Premium Users</h2>
+
+<table id="premium-users-table">
+    <tr>
+        <th>id</th>
+        <th>email</th>
+    </tr>
+    <% @premium_users.each do |premium_user| %>
+    <tr>
+        <td><%= premium_user.id %></td>
+        <td><%= link_to premium_user.email, premium_user %></td>
+    </tr>
+    <% end %>
+</table>

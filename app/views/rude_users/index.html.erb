@@ -1,0 +1,14 @@
+<h2>Rude Users</h2>
+
+<table id="rude-users-table">
+    <tr>
+        <th>id</th>
+        <th>email</th>
+    </tr>
+    <% @rude_users.each do |rude_user| %>
+      <tr>
+        <td><%= rude_user.id %></td>
+        <td><%= link_to rude_user.email, rude_user %></td>
+      </tr>
+    <% end %>
+</table>

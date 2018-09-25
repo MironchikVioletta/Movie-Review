@@ -1,0 +1,10 @@
+
+<% if @user.blocked %>
+<%= link_to "Unblock", toggle_block_user_path(@user), method: :put, class: "btn btn-success" %>
+
+<% else %>
+<%= link_to "Block", toggle_block_user_path(@user), method: :put, class: "btn btn-danger" %>
+<% end %>
+
+
+<!-- user_toggle_block_path -->
